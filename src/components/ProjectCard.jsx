@@ -19,7 +19,7 @@ const ProjectCard = ({ title, description, liveSite, githubClientLink,githubServ
     };
 
     return (
-        <div className="flex md:flex-row flex-col p-5 rounded-xl bg-[#00091A] text-gray-300 shadow-2xl justify-between gap-6 my-5">
+        <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" className="flex md:flex-row flex-col p-5 rounded-xl bg-[#00091A] text-gray-300 shadow-2xl justify-between gap-6 my-5">
             <div className="md:w-1/2">
                 <h1 className="text-2xl text-green-400 font-semibold">{title}</h1>
                 <p className="text-justify mt-3">{description}</p>

@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import Lottie from 'react-lottie';
 import animationData from '../../assets/images/contact.json';
 import SectionTitle from '../../components/SectionTitle';
+import Swal from 'sweetalert2';
 
 
 const Contact = () => {
@@ -20,25 +21,38 @@ const Contact = () => {
    
     emailjs.send('service_ogc2psa', 'template_3b4y5pv', templateParams,'u4kuHx4hpfn341v5W')
       .then(() => {
-        alert('Your message has been sent successfully!');
+        Swal.fire({
+          position: 'top-middle',
+          icon: 'success',
+          title: 'Your message send successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
         reset();
       })
       .catch((error) => {
         console.log(error.message);
-        alert('Oops! An error occurred while sending your message. Please try again later.');
+        Swal.fire({
+          position: 'top-middle',
+          icon: 'error',
+          title: 'Oops! An error occurred while sending your message. Please try again later.',
+          showConfirmButton: false,
+          timer: 1500
+        })
+       
       });
 
   };
 
   return (
-    <div className="md:mx-16 mx-5 my-5">
+    <div data-aos="flip-down" data-aos-duration="3000" className="md:mx-16 mx-5 my-5">
       <SectionTitle title="Contact Me" />
       <div className="flex bg-[#00091A] flex-col md:px-12 px-5 py-8 justify-center rounded-xl">
         <h2 className="text-2xl font-bold text-gray-300 mb-4">Get in Touch</h2>
         <p className="text-lg text-gray-300 mb-6">
           Have a question or want to work together? Please feel free to contact me by filling out the form below.
         </p>
-        <div className="flex md:flex-row flex-col md:gap-12 gap-5">
+        <div  className="flex md:flex-row flex-col md:gap-12 gap-5">
           <Lottie
             options={{ animationData }}
             height={400}
@@ -75,18 +89,7 @@ const Contact = () => {
               />
               {errors.email && <span className="text-red-500">Email is required</span>}
             </div>
-            <div className="mb-4">
-              <label htmlFor="subject" className="block text-gray-200 text-lg font-semibold mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                {...register('subject')}
-                className="w-full p-3 border border-gray-300 text-gray-300 bg-transparent rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
-                placeholder="Email subject"
-              />
-            </div>
+          
             <div className="mb-6">
               <label htmlFor="message" className="block text-gray-200 text-lg font-semibold mb-2">
                 Message

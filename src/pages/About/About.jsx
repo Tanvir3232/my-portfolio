@@ -5,13 +5,13 @@ import SectionTitle from '../../components/SectionTitle';
 const About = () => {
   
   return (
-    <div className="md:mx-16 mx-5 my-5">
+    <div data-aos="fade-up" data-aos-duration="3000"  className="md:mx-16 mx-5 my-5">
       <SectionTitle title="About Me" />
 
       <div className="bg-[#00091A] text-gray-900 rounded-lg shadow p-8">
       
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="bg-gradient-to-br from-blue-900 to-green-400 p-5 rounded-lg flex flex-col items-center ">
+          <div   className="flex flex-col lg:flex-row items-center">
+            <div data-aos="flip-right" data-aos-duration="3000" className="bg-gradient-to-br from-blue-900 to-green-400 p-5 rounded-lg flex flex-col items-center ">
               <figure className='h-48 w-48 rounded-full'>
               <img src={tanvirImage} alt="Tanvir Ahmad" className="w-48 h-48 rounded-full" />
               </figure>

@@ -14,10 +14,10 @@ const Skills = () => {
         <div className="px-16 my-5">
             <SectionTitle title="My Skills"></SectionTitle>
             <div className="grid md:grid-cols-4 gap-6 mt-5">
-                <SkillCard icon={jsIcon} title='JavaScript' data-aos="flip-left" data-aos-duration="1000"></SkillCard>
-                <SkillCard icon={reactIcon} title='React JS' data-aos="flip-left" data-aos-duration="1000"></SkillCard>
-                <SkillCard icon={mongodbIcon} title='MongoDB' data-aos="flip-left" data-aos-duration="1000"></SkillCard>
-                <SkillCard icon={expressIcon} title='Express JS' data-aos="flip-left" data-aos-duration="1000"></SkillCard>
+                <SkillCard icon={jsIcon} title='JavaScript' ></SkillCard>
+                <SkillCard icon={reactIcon} title='React JS' ></SkillCard>
+                <SkillCard icon={mongodbIcon} title='MongoDB' ></SkillCard>
+                <SkillCard icon={expressIcon} title='Express JS' ></SkillCard>
             </div>
         </div>
     );
